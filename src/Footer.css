@@ -1,0 +1,177 @@
+/* Footer.css */
+
+.container0 {
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .custom-hr {
+    border: 0;
+    border-top: 1px solid #e0e0e0;
+    margin: 20px 0;
+  }
+  
+  .row0 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .column0 {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .sib-form {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #fff;
+  }
+  
+  .sib-form-container {
+    margin: 0 auto;
+  }
+  
+  .sib-form-message-panel {
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .sib-form-message-panel__text {
+    font-size: 16px;
+  }
+  
+  .sib-input {
+    margin: 10px 0;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .button {
+    background-color: #0097b2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .footer-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-contact,
+  .footer-address,
+  .footer-phone {
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icon {
+    color: #333;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-top: 1px solid #ddd;
+  }
+  .container-fluid {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .custom-hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+  }
+  
+  .row0 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .column0 {
+    flex: 1;
+    padding: 15px;
+    min-width: 200px;
+    box-sizing: border-box;
+  }
+  
+  .sib-form-container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 1);
+    max-width: 350px;
+    border-radius: 3px;
+    border-width: 1px;
+    border-color: #C0CCD9;
+    border-style: solid;
+    direction: ltr;
+  }
+  
+  .sib-form-message-panel {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .sib-form-block__button {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF;
+    background-color: #0097b2;
+    border-radius: 3px;
+    border-width: 0px;
+  }
+  
+  .social__links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .social__link {
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .footer__bottom {
+    padding: 10px 0;
+  }
+  
+  .footer__item-title {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .footer__item-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer__item-link {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .footer__item-link:hover {
+    text-decoration: underline;
+  }
+  
