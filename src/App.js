@@ -7,11 +7,12 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from "react-route
 import About from "./pages/about";
 import Teams from "./pages/teams"; 
 import Career from "./pages/career"; 
+import Contact from "./pages/contact"; 
 
 function Layout({ children }) {
   const location = useLocation();
   
-  // Determine if the current path is "/about"
+ 
   const isAboutPage = location.pathname === "/about";
 
   return (
@@ -32,17 +33,11 @@ function App() {
             <About />
           </Layout>
         } />
-        <Route path="/teams" element={ // Add the Teams route
-          
-            <Teams />
-         
-        } />
-        <Route path="/career" element={ // Add the Teams route
-          
-          <Career />
-       
-      } />
+        <Route path="/contact" element={  <Contact />} />
+        <Route path="/teams" element={  <Teams />} />
+        <Route path="/career" element={  <Career />  } />
         <Route path="/home" element={<Navbar />} />
+        <Route path="/" element={<Navbar />} />
       </Routes>
     </Router>
   );

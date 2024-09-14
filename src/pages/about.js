@@ -20,36 +20,36 @@ const Navbar = () => {
   }, []);
 
 
+  const imageData1 = [
+    {
+      src: 'New Updated History Image 1 (AboutUs).png',
+      alt: 'Image 1',
+      tooltip: 'May 2019 Mleko Dairy, Unnao Started Atta Chaki Kit',
+    },
+    {
+      src: 'New Updated History Image 2 (AboutUs).png',
+      alt: 'Image 2',
+      tooltip:
+        'September 2018 Sagar Energy Solutions partners for production/prototyping of SABI lamps',
+    },
+    {
+      src: 'New Updated History Image 3 (AboutUs).png',
+      alt: 'Image 3',
+      tooltip: 'March 2022 The first pilot of Argus with Ounce',
+    },
+    {
+      src: 'New Updated History Image 4 (AboutUs).png',
+      alt: 'Image 4',
+      tooltip: 'November 2022 Ganecos onboarded as Argus pilot partner',
+    },
+    {
+      src: 'New Updated History Image 5 (AboutUs).png',
+      alt: 'Image 5',
+      tooltip: 'April 2021 Dave Prototyping began',
+    },
+  ];
 
 
-  // Data array for images and descriptions
-const imageData = [
-  {
-    src: 'New Updated History Image 1 (AboutUs).png',
-    date: 'May 2019',
-    description: 'Mleko Dairy, Unnao\nStarted Atta Chaki Kit',
-  },
-  {
-    src: 'New Updated History Image 2 (AboutUs).png',
-    date: 'September 2018',
-    description: 'Sagar Energy Solutions partners\nfor production/prototyping of SABI lamps',
-  },
-  {
-    src: 'New Updated History Image 3 (AboutUs).png',
-    date: 'March 2022',
-    description: 'The first pilot of Argus\nwith Ounce',
-  },
-  {
-    src: 'New Updated History Image 4 (AboutUs).png',
-    date: 'November 2022',
-    description: 'Ganecos onboarded\nas Argus pilot partner',
-  },
-  {
-    src: 'New Updated History Image 5 (AboutUs).png',
-    date: 'April 2021',
-    description: 'Dave Prototyping began',
-  },
-];
 
 
 
@@ -178,37 +178,34 @@ const imageData = [
 
 
 {/* Tool tip effect  */}
-    <div className="container image-container" style={{ position: 'relative', width: '100%', overflow: 'hidden', marginTop: '50px' }}>
+<div
+      className="history-container unique-image-container"
+      style={{ position: 'relative', width: '100%', overflow: 'hidden', marginTop: '50px' }}
+    >
       {/* Centered Text Block */}
       <div className="row text-center">
         <div className="col-12">
-          <h1 className="responsive-heading">
-            For years, we've been dedicated to
-            <br /> innovating and assisting
+          <h1 className="unique-responsive-heading">
+            For years, we've been dedicated to<br /> innovating and assisting
           </h1>
-          <p className="responsive-paragraph">our esteemed clients.</p>
+          <p className="unique-responsive-paragraph">our esteemed clients.</p>
         </div>
       </div>
 
       {/* Second Row of Images */}
       <div className="row">
         <div className="col-12 d-flex flex-wrap justify-content-center pt-5 mt-2">
-          {imageData.map((data, index) => (
-            <div className="image-wrapper" key={index}>
-              <div className="wrapper">
-                <img src={data.src} className="random-image img-fluid" alt={`History ${index + 1}`} />
-                <div className="tooltip text-center">
-                  {data.date}
-                  <br />
-                  {data.description}
-                </div>
+          {imageData1.map((image, index) => (
+            <div className="unique-image-wrapper" key={index}>
+              <div className="unique-wrapper">
+                <img src={image.src} className="unique-random-image img-fluid" alt={image.alt} />
+                <div className="unique-tooltip text-center">{image.tooltip}</div>
               </div>
             </div>
           ))}
         </div>
       </div>
     </div>
-
     {/* Value section  */}
     <div className="container-fluid values-section p-3 my-5">
       <div className="row mb-4">
