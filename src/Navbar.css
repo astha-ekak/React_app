@@ -95,7 +95,6 @@
 .responsive-text {
     font-family: "Poppins", sans-serif;
     font-size: 45px;
-   
     margin-left:70px;
 }
 
@@ -179,76 +178,180 @@
 
 
 
-.custom-card {
-  perspective: 1000px;
-  border: none;
-  padding:20px;
-  margin-top:150px;
+
+
+
+
+.container33 {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
-.custom-card-inner {
+.heading11-row33 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.heading1133 {
+  font-size: 4rem;
+  margin-left:70px;
+ 
+  color: black;
+}
+@media(max-width:576px){
+  .heading1133{
+    margin-left: 5px;
+}}
+
+.cards11-row33 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card1133 {
+  width: 30%;
+  perspective: 1000px;
+  border: none;
+}
+
+.card11-inner33 {
   position: relative;
   width: 100%;
-  max-width:440px;
-  height: 500px; 
+  height: 400px;
+  text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
   border-radius: 25px;
-  border: none;
-}
-.custom-card-back p {
-  margin: 0;
-  padding: 10px;
-  font-size: 1.1rem; 
-  line-height: 1.5;
 }
 
-@media (max-width: 768px) {
-  .custom-card-back p {
-    font-size: 0.9rem; 
-    padding: 5px; 
-  }
-
-  .custom-card-img {
-    height: auto; 
-  }
-}
-
-.custom-card:hover .custom-card-inner {
+.card1133:hover .card11-inner33 {
   transform: rotateY(180deg);
 }
 
-.custom-card-front,
-.custom-card-back {
+.card11-front33, .card11-back33 {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
   border-radius: 25px;
-  border: none;
 }
 
-.custom-card-front {
+.card11-front33 {
   background-color: transparent;
-}
-
-.custom-card-img {
-  width: 90%;
-  height: 100%;
-  object-fit: cover; 
   border-radius: 25px;
 }
 
-.custom-card-back {
+.card11-front33 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.card11-back33 {
   background-color: #158d91;
   color: white;
   transform: rotateY(180deg);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   border-radius: 25px;
+  padding: 0px;
+  font-size: 15px;
 }
+
+@media (max-width: 576px) {
+.card11-back33 {
+    font-size: 12px;
+}
+}
+
+.card11-button33 {
+  background-color: #f1c40f;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 15px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.card11-button33:hover {
+  background-color: #e1b12c;
+}
+
+.heading1233 {
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  .cards11-row33 {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .card1133 {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+  .heading1133 {
+      font-size: 2rem;
+      text-align: center;
+  }
+
+  .heading1233 {
+      font-size: 1rem;
+      text-align: center;
+  }
+
+  .hide-on-small33 {
+      display: none;
+  }
+}
+/* Navbar.css */
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+@media (max-width: 767px) { /* Adjust the breakpoint as needed */
+  .row.row-cols-1.row-cols-md-2.row-cols-lg-3 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+.h1{
+  font-size: 2.8rem;
+  font-Weight: bold
+}
+
+@media (max-width: 767px) { 
+ .h1{ font-size: 1.8rem;
+  font-Weight: bold}
+
+}
+
+.p{
+  font-size: 1rem;
+
+}
+
+@media (max-width: 767px) { 
+ .p{ font-size: 0.5rem;
+  }
+
+}
+
+
+
 
 
 
@@ -314,19 +417,19 @@
 }
 
 .text-right-100px {
-  font-size: 8.5rem;
+  font-size: 6.5rem;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
-  margin-right: 45px;
+  margin-right: 25px;
   padding: 10px;
   text-align: right;
   white-space: nowrap;
 }
 
 .text-right-24px {
-  font-size: 1.1875rem;
+  font-size: 0.8rem;
   font-family: "Poppins", sans-serif;
-  margin-right: 45px;
+
   padding: 10px;
   text-align: right;
   white-space: nowrap;
@@ -487,12 +590,13 @@
   }
 
   .testimonial {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
+    text-align: left;
   }
 
   .author {
     font-size: 0.8rem;
-    margin-top: 10px;
+    margin-top: 50px;
   }
 }
 

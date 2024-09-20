@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Navbar.css'; 
+import Footer from './Footer';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 
@@ -107,17 +108,14 @@ const Navbar = () => {
 
 
 {/* Content Row */}
-<div className="row align-items-center no-gutters custom-content-row">
-  <div className="col-md-6 col-sm-12 mt-2 d-flex justify-content-center">
-    <div className="custom-card" style={{ border: 'none' }}>
+<div className="row align-items-center no-gutters custom-content-row" style={{ marginTop: '0', paddingTop: '0' }}>
+  <div className="col-md-6 col-sm-12 d-flex justify-content-center" style={{ padding: '0', margin: '0' }}>
+    <div className="custom-card" style={{ border: 'none', margin: '0', padding: '0' }}>
       <img
         src="Homepage ekak website.png"
         className="custom-card-img-top img-fluid"
         style={{
-          borderTopLeftRadius: '60px',
-          borderTopRightRadius: '60px',
-          borderBottomLeftRadius: '60px',
-          borderBottomRightRadius: '60px',
+          borderRadius: '60px',
           maxWidth: '100%',
           maxHeight: '85vh',
         }}
@@ -125,39 +123,33 @@ const Navbar = () => {
     </div>
   </div>
 
-  <div className="col-md-6 col-sm-12 p-0 d-flex justify-content-left">
-    <div className="custom-card text-left" style={{ border: 'none' }}>
-      <div className="custom-card-body">
-        <div className="custom-icon-container">
-          <div className="custom-icon-card col text-left">
-            <img src="renewable.png" style={{ maxWidth: '80px' }} alt="" />
-            <h6 className="pt-2" style={{ fontSize: '24px', fontFamily: '"Poppins", sans-serif' }}>
-              Renewable Energy
-            </h6>
-            <p className="small mt-4" style={{ fontSize: '14px', fontFamily: '"Poppins", sans-serif' }}>
+  <div className="col-md-6 col-sm-12 p-0 d-flex justify-content-left" style={{ padding: '0', margin: '0' }}>
+    <div className="custom-card text-left" style={{ border: 'none', margin: '0', padding: '0' }}>
+      <div className="custom-card-body" style={{ padding: '0', margin: '0' }}>
+        <div className="custom-icon-container" style={{ padding: '0', margin: '0' }}>
+          <div className="custom-icon-card col text-left" style={{ marginBottom: '0', padding: '0' }}>
+            <img src="renewable.png" className='pl-3' style={{ maxWidth: '80px' }} alt="" />
+            <h6 className="pt-2 pl-3" style={{ fontSize: '24px', fontFamily: '"Poppins", sans-serif' }}>Renewable Energy</h6>
+            <p className="small mt-4 pl-3" style={{ fontSize: '14px', fontFamily: '"Poppins", sans-serif' }}>
               At Ekak, we believe in the power of renewable energy to transform <br />
               communities and improve lives. That's why we're proud to offer a range<br />
               of solar lamp and solar charging hubs with remote monitoring systems.
             </p>
           </div>
-          <div className="custom-icon-card col text-left">
+          <div className="custom-icon-card col text-left" style={{ marginBottom: '0', padding: '0' }}>
             <img src="3D.png" style={{ maxWidth: '80px' }} alt="" />
-            <h6 className="pt-2" style={{ fontSize: '24px', fontFamily: '"Poppins", sans-serif' }}>
-              3D Printing
-            </h6>
-            <p className="small mt-4" style={{ fontSize: '15px', fontFamily: '"Poppins", sans-serif' }}>
+            <h6 className="pt-2 pl-3" style={{ fontSize: '24px', fontFamily: '"Poppins", sans-serif' }}>3D Printing</h6>
+            <p className="small mt-4 pl-3" style={{ fontSize: '15px', fontFamily: '"Poppins", sans-serif' }}>
               We share passion about the possibilities of 3D printing and additive<br />
               manufacturing. Whether you need a one-of-a-kind prototype, a small <br />
               production run, or a large-scale manufacturing solution, we can help you<br />
               achieve quickly, efficiently, & cost-effectively.
             </p>
           </div>
-          <div className="custom-icon-card col text-left">
+          <div className="custom-icon-card col text-left" style={{ marginBottom: '0', padding: '0' }}>
             <img src="Digital.png" style={{ maxWidth: '80px' }} alt="" />
-            <h6 className="pt-2" style={{ fontSize: '24px', fontFamily: '"Poppins", sans-serif' }}>
-              Digital Transformation
-            </h6>
-            <p className="small mt-4" style={{ fontSize: '15px', fontFamily: '"Poppins", sans-serif' }}>
+            <h6 className="pt-2 pl-3" style={{ fontSize: '24px', fontFamily: '"Poppins", sans-serif' }}>Digital Transformation</h6>
+            <p className="small mt-4 pl-3" style={{ fontSize: '15px', fontFamily: '"Poppins", sans-serif' }}>
               Digital transformation is crucial for all businesses. Our products enhance<br />
               safety in factories and warehouses, improve road safety, and optimize<br />
               supply chain tracking. Whether you aim to prevent accidents, boost<br />
@@ -174,85 +166,66 @@ const Navbar = () => {
       
       {/* Solutions section */ }
 
-          <CardGroup  className="custom-card-group " >
-      <Card className="custom-card " style={{ border: 'none' }}>
-        <div className="custom-card-inner">
-          <div className="custom-card-front">
-            <Card.Img variant="top" src="3D printing work.png" className="custom-card-img" />
-          </div>
-          <div className="custom-card-back">
-            <Card.Body>
-            <Card.Text style={{ textAlign: 'left', padding: '0px', margin: 'auto', fontFamily: "'Poppins', sans-serif", maxWidth: '90%', wordWrap: 'break-word' }}>
-          
-              <p className="p-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
-              <span style={{ fontWeight: 700 }}>Ekakshar’s</span> product development service focuses on{' '}
-              <span style={{ fontWeight: 700 }}>3D printing</span> and small-scale manufacturing. We use advanced
-              technologies like Computational Flow Dynamics and Finite Element Analysis to ensure precision and
-              efficiency. Let us bring your ideas to life with our{' '}
-              <span style={{ fontWeight: 600 }}>innovative and sustainable solutions</span>. Contact us today!
-            </p>
-              </Card.Text>
-              <div className="d-flex justify-content-center">
-            <Button className="custom-card-button" style={{ backgroundColor: '#f1c40f', color: 'black', border: 'none', borderRadius: '5px', padding: '10px 20px' }}>Learn More</Button>
-          </div>
-            </Card.Body>
-          </div>
-        </div>
-      </Card>
+      <div className="container-fluid33">
+      <div className="row33 heading11-row33 mt-5">
+        <h2 className="heading1133 ">SOLUTIONS</h2>
+      </div>
 
-      <Card className="custom-card" style={{ border: 'none' }}>
-  <div className="custom-card-inner">
-    <div className="custom-card-front">
-      <Card.Img variant="top" src="Work 1 (Homepage).png" className="custom-card-img" />
-    </div>
-    <div className="custom-card-back">
-      <Card.Body>
-      <Card.Text style={{ textAlign: 'left', padding: '0px', margin: 'auto', fontFamily: "'Poppins', sans-serif", maxWidth: '90%', wordWrap: 'break-word' }}>
+      <div className="container33">
+        <div className="row33 cards11-row33 pt-3 mt-2">
           
-          
-          <p className="p-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                  <span style={{ fontWeight: 700 }}>Argus,</span> our advanced factory safety software with real-time monitoring and computer vision technology. It features{' '}
-                  <span style={{ fontWeight: 700 }}>automated safety checks,</span>predictive maintenance, and{' '}
-                  <span style={{ fontWeight: 700 }}>detailed incident analysis.</span>Proactively manage safety and reduce downtime,to enhance manufacturing processes.
+          <div className="card1133" style={{ borderRadius: '50%' }}>
+            <div className="card11-inner33">
+              <div className="card11-front33">
+                <img src="3D printing work.png" alt="3D Printing" />
+              </div>
+              <div className="card11-back33">
+                <p className="p-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                  <span style={{ fontWeight: 700 }}>Ekakshar’s</span> product development service focuses on
+                  <span style={{ fontWeight: 700 }}> 3D printing</span> and small-scale manufacturing. We use advanced technologies like Computational Flow Dynamics and Finite Element Analysis to ensure precision and efficiency. Let us bring your ideas to life with our
+                  <span style={{ fontWeight: 600 }}> innovative and sustainable solutions</span>. Contact us today!
                 </p>
-               
-        </Card.Text>
-        <div className="d-flex justify-content-center mt-3">
-            <Button className="custom-card-button" style={{ backgroundColor: '#f1c40f', color: 'black', border: 'none', borderRadius: '5px', padding: '10px 20px' }}>Learn More</Button>
+                <a href="/contact" className="card11-button33">Contact Us</a>
+              </div>
+            </div>
           </div>
-      </Card.Body>
-    </div>
-  </div>
-</Card>
-
-
-
-  <Card className="custom-card " style={{ border: 'none' }}>
-    <div className="custom-card-inner">
-      <div className="custom-card-front">
-        <Card.Img variant="top" src="Dave Work Image.png" className="custom-card-img" />
-      </div>
-      <div className="custom-card-back">
-        <Card.Body>
-        <Card.Text style={{ textAlign: 'left', padding: '0px', margin: 'auto', fontFamily: "'Poppins', sans-serif", maxWidth: '90%', wordWrap: 'break-word' }}>
           
-          
-            <p className="p-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
-            <span style={{ fontWeight: 700 }}>Dave,</span> our road safety solution uses machine learning for{' '}
-            <span style={{ fontWeight: 700 }}>real-time driver behavior tracking.</span> With GPS monitoring,
-            distraction and drowsiness alerts, lane tracking, and performance scores, we help prevent accidents and
-            improve driver safety. Monitor and incentivize safe driving with our comprehensive system.
-          </p>
-          
-          </Card.Text>
-          <div className="d-flex justify-content-center">
-            <Button className="custom-card-button" style={{ backgroundColor: '#f1c40f', color: 'black', border: 'none', borderRadius: '5px', padding: '10px 20px' }}>Learn More</Button>
+          <div className="card1133">
+            <div className="card11-inner33">
+              <div className="card11-front33">
+                <img src="Work 1 (Homepage).png" alt="Factory Safety Software" />
+              </div>
+              <div className="card11-back33">
+                <p className="p-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                  <span style={{ fontWeight: 700 }}>Argus,</span> our advanced factory safety software with real-time monitoring and computer vision technology. It features
+                  <span style={{ fontWeight: 700 }}> automated safety checks,</span> predictive maintenance, and
+                  <span style={{ fontWeight: 700 }}> detailed incident analysis.</span> Proactively manage safety, reduce downtime, and enhance your manufacturing processes with our all-in-one solution.
+                </p>
+                <a href="https://argus-website-4d53eb984d34.herokuapp.com/" className="card11-button33">Visit Now</a>
+              </div>
+            </div>
           </div>
-        </Card.Body>
+          
+          <div className="card1133">
+            <div className="card11-inner33">
+              <div className="card11-front33">
+                <img src="Dave Work Image.png" alt="Road Safety Solution" />
+              </div>
+              <div className="card11-back33">
+                <p className="p-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                  <span style={{ fontWeight: 700 }}>Dave,</span> our road safety solution uses machine learning for
+                  <span style={{ fontWeight: 700 }}> real-time driver behavior tracking.</span> With GPS monitoring, distraction and drowsiness alerts, lane tracking, and performance scores, we help prevent accidents and improve driver safety. Monitor and incentivize safe driving with our comprehensive system.
+                </p>
+                <a href="/contact" className="card11-button33">Contact Us</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
+
+    
     </div>
-  </Card>
-          </CardGroup>
 
   {/* Award Section */ }
           <div className="card-group mt-5 pt-5">
@@ -266,7 +239,7 @@ const Navbar = () => {
         <img src="Homepage Award 3 (1) 1.png" className="card-img-top p-4 pt-0" alt="Award 3" />
       </div>
       <div className="card" style={{ border: 'none' }}>
-        <img src="Homepage Award 4.png" className="card-img-top  p-5 " alt="Award 4" />
+        <img src="Homepage Award 4.png" className="card-img-top  p-4 pt-0 " alt="Award 4" />
       </div>
           </div>
 
@@ -287,51 +260,82 @@ const Navbar = () => {
         <p>This allows us to address each issue with<br /> precision engineering and a data-driven,<br /> cost-effective approach.</p>
       </div>
           </div>
+          
 
           {/* Position of Company */}
           <div className="container-fluid ml-2 mr-2" style={{ marginTop: '100px' }}>
-      
-      <div className="row">
-        <div className="col text-left text-left-50px">
-          <p className="mb-0">
-            Where Innovations <br /> meets Sustainability
-          </p>
-        </div>
-      </div>
+  <div className="row">
+    <div className="col text-left">
+      <div
+        className="custom-card-box"
+        style={{
+          marginLeft: '30px',
+          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.5)', // Box shadow for the card effect
+          padding: '10px', // Padding inside the box
+          borderRadius: '8px', // Rounded corners
+          backgroundColor: '#fff', // Background color for the box
+          textAlign: 'left', // Align text to the left
+          marginBottom: '20px', // Space below the box
+          maxWidth: '100%', // Ensures the card doesn't exceed screen width
+          width: '600px', // Fixed width for larger screens
+        }}
+      >
+        <p
+          className="mb-0"
+          style={{
+            fontSize: '30px', // Font size for larger screens
+            marginLeft:'15px',
+            fontWeight: 'bold',
+            margin: 0,
+            '@media (max-width: 576px)': {
+              fontSize: '20px', // Font size for smaller screens
+            },
+          }}
+        >
+          Where Innovations<br />
+          meets Sustainability
+        </p>
 
-      <div className="row">
-        <div className="col text-left pt-5 text-left-20px">
-          <p className="text111 mb-0" style={{
-        fontSize: '15 px',
-        margin: 0,
-        '@media (max-width: 576px)': {
-          fontSize: '10px', // Adjust font size for smaller screens
-        },
-      }}>
-            It emphasizes the integration of cutting-edge technology,<br /> pioneering business paradigms, and strategies centred<br/> around customer satisfaction.
-       
-            </p>
-        </div>
+        <p
+          className="text111 mb-0"
+          style={{
+            marginTop: '55px',
+            fontSize: '18px', // Font size for larger screens
+            marginLeft:'15px',
+            margin: 0,
+            '@media (max-width: 576px)': {
+              fontSize: '14px', // Adjust font size for smaller screens
+              marginTop: '20px', // Adjust margin for small screens
+            },
+          }}
+        >
+          It emphasizes the integration of cutting-edge technology,
+          <br />
+          pioneering business paradigms, and strategies centred
+          <br />
+          around customer satisfaction.
+        </p>
       </div>
+    </div>
+  </div>
 
- 
-      <div className="row">
-        <div className="col  text-right-100px">
-          <p className="text3 mb-0 pr-5 pt-1">*6 years</p>
-        </div>
-      </div>
+  <div className="row">
+    <div className="col text-right-100px">
+      <p className="text3 mb-0 pr-5 pt-1">*6 years</p>
+    </div>
+  </div>
 
-      <div className="row">
-        <div className="col">
-          <hr />
-        </div>
-        <div className="col  text-right-24px">
-          <p className="text2 mb-0 pr-5 pt-2">
-            Optimizing businesses, Optimizing world.
-          </p>
-        </div>
-      </div>
-          </div>
+  <div className="row">
+    <div className="col">
+      <hr />
+    </div>
+    <div className="col text-right-24px">
+      <p className="text2 mb-0">
+        Optimizing businesses, Optimizing world.
+      </p>
+    </div>
+  </div>
+</div>
 
           {/* Blogs section */}
           <div className="container my-5">
@@ -345,8 +349,8 @@ const Navbar = () => {
           >
             <div className="cylindrical-image-container">
               <img
-                src="Ekak Website9.png"
-                alt="Image 1"
+                src="Ekak Blog Image 3.0 22.png"
+                alt=""
                 className="img-fluid cylindrical-image"
               />
             </div>
@@ -363,8 +367,8 @@ const Navbar = () => {
           >
             <div className="cylindrical-image-container">
               <img
-                src="/static/Ekak Website10.png"
-                alt="Image 2"
+                src="Ekak Blog Image 3.0 111.png"
+                alt=""
                 className="img-fluid cylindrical-image"
               />
             </div>
@@ -381,8 +385,8 @@ const Navbar = () => {
           >
             <div className="cylindrical-image-container">
               <img
-                src="/static/Ekak Website11.png"
-                alt="Image 3"
+                src="Ekak Blog Image 3.0.png"
+                alt=""
                 className="img-fluid cylindrical-image"
               />
             </div>
@@ -400,19 +404,19 @@ const Navbar = () => {
         <div className="col-md-12 testimonial-container text-center">
           <img
             src="Ekak Website12.png"
-            alt="Collaborators"
+            alt=""
             className="mx-auto d-block hover-effect"
           />
-          <p className="testimonial">
+          <p className="testimonial p-2">
             <i>
               Since our inception, we've been dedicated to delivering innovative and dependable solutions to our
               clients. We are proud to have been the trusted partner of the following forward-thinking corporations.
             </i>
           </p>
-          <p className="author">TRUSTED BY TOP BRANDS</p>
+          <p className="author mt-4">TRUSTED BY TOP BRANDS</p>
           <div className="container-fluid">
             <div className="row content-row2">
-              <div className="col-12 pt-5 mt-5">
+              <div className="col-12 mt-5">
                 <div className="card-group">
                   <div className="card" style={{ border: 'none' }}>
                     <img
@@ -452,9 +456,11 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
+          </div>
     
 
+
+<Footer />
     
    
     </>

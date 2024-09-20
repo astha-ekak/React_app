@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Navbar.css'; 
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
+import Footer from './Footer';
 
 
 
@@ -204,6 +205,8 @@ const Navbar = () => {
     </div>
     
   
+
+  <Footer/>
  </>
   );
 };

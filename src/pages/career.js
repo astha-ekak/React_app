@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Navbar.css'; 
+import Footer from './Footer';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 
@@ -29,7 +30,7 @@ const customCardData = [
     },
     {
       title: 'Great Colleague',
-      text: 'Closely tied and supportive\nteam.',
+      text: 'A closely-knit team that values\n support and collaboration.',
     },
     {
       title: 'Don’t Stop Learning',
@@ -41,7 +42,7 @@ const customCardData = [
     },
     {
       title: 'Work-Life Balance',
-      text: 'We prioritize work, but never put\nit before life.',
+      text: 'We truly value work but always \nprioritize life above all else',
     },
     {
       title: 'Cross Domain Exposure',
@@ -71,7 +72,7 @@ const customCardData = [
   );
 
   return (
-    <>
+<>
       <nav id="navbar" className={`navbar navbar-expand-lg navbar-light fixed-top ${scrolled ? 'scrolled' : ''}`}>
         <a className="navbar-brand">
           <img
@@ -153,10 +154,68 @@ const customCardData = [
      <div>
       {/* Main Custom Card */}
       <div
-        className="custom-card text-center"
+  className="custom-card text-center"
+  style={{
+    border: 'none',
+    height: '10px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+  }}
+>
+  <div
+    className="custom-card-body"
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '50%',
+    }}
+  >
+    <h5
+      className="custom-card-title"
+      style={{
+        fontFamily: "'Red Hat Display', sans-serif",
+        fontWeight: 'bold',
+        fontSize: '50px', // Adjusted font size
+        textAlign: 'center',
+        margin: '0',
+        padding: '0',
+        transition: 'font-size 0.3s ease',
+      }}
+    >
+      WHY JOIN
+      <br />
+      US?
+    </h5>
+    <p
+      className="custom-card-text text-dark"
+      style={{
+        display: 'inline-block',
+        transform: 'rotate(-10deg)',
+        padding: '5px',
+        backgroundColor: 'rgb(171, 247, 247)',
+        borderRadius: '50px',
+        fontFamily: "'Lato', sans-serif",
+        fontSize: '15px', // Adjusted font size
+        transition: 'font-size 0.3s ease',
+        margin: '0',
+      }}
+    >
+      P.s. we have many
+    </p>
+  </div>
+</div>
+<div className="row no-gutters row-cols-1 row-cols-md-2 row-cols-lg-3 g-0 px-5 px-md-5" style={{ marginTop: '0px' }}>
+  {customCardData.map((card, index) => (
+    <div className="col" key={index}>
+      <div
+        className="custom-card"
         style={{
           border: 'none',
-          height: '10px',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -171,7 +230,7 @@ const customCardData = [
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            height: '50%',
+            textAlign: 'center',
           }}
         >
           <h5
@@ -179,98 +238,36 @@ const customCardData = [
             style={{
               fontFamily: "'Red Hat Display', sans-serif",
               fontWeight: 'bold',
-              fontSize: '69px',
+              fontSize: '24px',
               textAlign: 'center',
-              margin: '0', 
-              padding: '0', 
+              margin: '0',
+              padding: '0',
               transition: 'font-size 0.3s ease',
             }}
           >
-            WHY JOIN
-            <br />
-            US?
+            {card.title}
           </h5>
           <p
-            className="custom-card-text text-dark"
+            className="custom-card-text"
             style={{
-              display: 'inline-block',
-              transform: 'rotate(-10deg)',
-              padding: '5px',
-              backgroundColor: 'rgb(171, 247, 247)',
-              borderRadius: '50px',
               fontFamily: "'Lato', sans-serif",
-              fontSize: '17px',
+              fontSize: '16px',
+              textAlign: 'center',
+              whiteSpace: 'pre-line',
               transition: 'font-size 0.3s ease',
-              margin: '0',
+              marginTop: '30px',
+              padding: '0',
             }}
           >
-            P.s. we have many
+            {card.text}
           </p>
         </div>
       </div>
-      <div
-        className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 px-3 px-md-4"
-        style={{ marginTop: '0px' }}
-      >
-        {customCardData.map((card, index) => (
-          <div className="col" key={index}>
-            <div
-              className="custom-card h-100"
-              style={{
-                border: 'none',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                textAlign: 'center',
-                height: '50%',
-              }}
-            >
-              <div
-                className="custom-card-body"
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  textAlign: 'center',
-                  height: '50%',
-                }}
-              >
-                <h5
-                  className="custom-card-title"
-                  style={{
-                    fontFamily: "'Red Hat Display', sans-serif",
-                    fontWeight: 'bold',
-                    fontSize: '24px',
-                    textAlign: 'center',
-                    margin: '0',
-                    padding: '0',
-                    transition: 'font-size 0.3s ease',
-                  }}
-                >
-                  {card.title}
-                </h5>
-                <p
-                  className="custom-card-text"
-                  style={{
-                    fontFamily: "'Lato', sans-serif",
-                    fontSize: '19px',
-                    textAlign: 'center',
-                    whiteSpace: 'pre-line', 
-                    transition: 'font-size 0.3s ease',
-                    margin: '0', 
-                    padding: '0',
-                  }}
-                >
-                  {card.text}
-                </p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
     </div>
+  ))}
+</div>
+
+</div>
 
 
     {/* Image section-2 */}
@@ -285,7 +282,7 @@ const customCardData = [
     </div>
    
 {/* Join us section */}
-<div style={{ margin: '3rem 0', paddingBottom: '3rem' }}>
+    <div style={{ margin: '3rem 0', paddingBottom: '3rem' }}>
       {/* First Row */}
       <div
         style={{
@@ -294,13 +291,13 @@ const customCardData = [
           textAlign: 'center',
         }}
       >
-        <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>WANT TO JOIN US?</h1>
+        <h1>WANT TO JOIN US?</h1>
       </div>
 
       {/* Second Row */}
       <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
-        <p style={{ fontSize: '1.25rem' }}>
-          Drop your resume capturing what kind of role you are<br /> applying for.
+        <p>
+          Drop your resume capturing what kind of role you are applying for.
         </p>
       </div>
 
@@ -310,7 +307,7 @@ const customCardData = [
           style={{
             borderRadius: '50px',
             padding: '0.75rem 1.5rem',
-            backgroundColor: '#343a40', 
+            backgroundColor: '#000000', 
             color: '#fff',
             border: 'none',
             fontSize: '1.125rem',
@@ -323,9 +320,11 @@ const customCardData = [
       </div>
     </div>
 
+    
 
-
+    <Footer/>
     </>
+  
   );
 };
 

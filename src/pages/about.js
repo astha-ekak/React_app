@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Navbar.css'; 
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
 import Button from 'react-bootstrap/Button';
 
 const Navbar = () => {
@@ -76,88 +77,132 @@ const Navbar = () => {
 
   return (
     <>
-      <nav id="navbar" className={`navbar navbar-expand-lg navbar-light fixed-top ${scrolled ? 'scrolled' : ''}`}>
-        <a className="navbar-brand">
-          <img
-            id="navbar-logo"
-            src={scrolled ? "Ekak logo mark (white logo with blue inner circle).png" : "Ekak logo mark without colour version.png"}
-            width="100px"
-            className="d-inline-block align-top"
-            alt=""
-          />
-        </a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
+     <nav
+  id="navbar"
+  className={`navbar navbar-expand-lg navbar-light fixed-top ${scrolled ? 'scrolled' : ''}`}
+  style={{
+    backgroundColor: scrolled ? '#158d91' : 'white',
+    transition: 'background-color 0.3s ease' // Optional for smooth transition
+  }}
+>
+  <a className="navbar-brand">
+    <img
+      id="navbar-logo"
+      src={scrolled ? "Ekak logo mark (white logo with blue inner circle).png" : "Ekak logo mark without colour version.png"}
+      width="100px"
+      className="d-inline-block align-top"
+      alt=""
+    />
+  </a>
+  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon"></span>
+  </button>
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mx-auto pl-5 ml-5">
-            <li className="nav-item">
-              <a className="nav-link" href="/home">Home</a>
-            </li>
-            <li className="nav-item">
-              <Link to="/about" className="nav-link">About</Link>
-            </li>
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Resources
-              </a>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a target="_blank" className="dropdown-item" href="https://medium.com/@EkakInn" rel="noopener noreferrer" onClick={() => window.open("https://medium.com/@EkakInn", '_blank')}>Blogs</a>
-              </div>
-            </li>
-            <li className="nav-item">
-              <Link to="/teams" className="nav-link">Team</Link>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/career">Career</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/contact">Contact</a>
-            </li>
-          </ul>
+  <div className="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul className="navbar-nav mx-auto pl-5 ml-5">
+      <li className="nav-item">
+        <a className="nav-link" href="/home">Home</a>
+      </li>
+      <li className="nav-item">
+        <Link to="/about" className="nav-link">About</Link>
+      </li>
+      <li className="nav-item dropdown">
+        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Resources
+        </a>
+        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a target="_blank" className="dropdown-item" href="https://medium.com/@EkakInn" rel="noopener noreferrer" onClick={() => window.open("https://medium.com/@EkakInn", '_blank')}>Blogs</a>
         </div>
-      </nav>
+      </li>
+      <li className="nav-item">
+        <Link to="/teams" className="nav-link">Team</Link>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link" href="/career">Career</a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link" href="/contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
       {/* Hero section */}
       <div className="hero-container"  style={{
-        backgroundImage: `url(${'teamhero.png'})`,}}>
+        backgroundImage: `url(${'about-hero-image-19.jpg'})`,}}>
       <div className="hero-overlay-text">
-        WE ARE <span className="highlighted-text">MORE THAN JUST</span> A FIRM
+       <span className="highlighted-text"> WE ARE MORE THAN JUST A FIRM</span>
       </div>
     </div>
 
         {/* Founder section */}
-    <div className="container-fluid pt-5">
-      <div className="row equal-height-columns pt-5 mt-5">
-        {/* First Column */}
-        <div className="col-md-8 col-sm-12 column-content ml-4" style={{ border: 'none' }}>
-          {/* Two rows of text */}
-          <div className="column-text" style={{ textAlign: 'left' }}>
-            <h2>We innovate for better lives.</h2>
-          </div>
-          <div className="column-text pt-4" style={{ textAlign: 'left' }}>
-            <p className="sub-heading">Founded by Mr. Shashank Misra, Ekak was born out of the<br /> thirst for a challenge and a vision for environmentally and<br /> social sustainable business.</p>
-          </div>
-        </div>
+   
 
-        {/* Second Column */}
-        <div className="col-md-4 col-sm-12 column-content right-aligned" style={{ border: 'none' }}>
-  {/* Four rows (one for image, three for text) */}
-  <div className="image-container pr-5 mr-3">
-    <img src="Ekak Definition.png" alt="Ekak Definition" style={{ width: '20rem' }} />
-  </div>
-  <div className="column-text pr-5 mr-5">
-    <p style={{ fontSize: '2rem', fontWeight: 500, margin: 0 }}>May</p>
-  </div>
-  <div className="column-text pr-5 mr-5">
-    <p style={{ fontSize: '6rem', fontWeight: 600, margin: 0 }}>2018</p>
-  </div>
-  <div className="column-text pr-5 mr-5">
-    <p style={{ fontSize: '1rem', margin: 0, fontStyle: 'italic' }}>Ekak was born.</p>
-  </div>
-</div>
+        <div className="container-fluid pt-5">
+  <div className="row equal-height-columns pt-5 mt-5">
+    {/* First Column */}
+    <div className="col-md-8 col-sm-12 column-content ml-4" style={{ border: 'none', textAlign: 'left' }}>
+      {/* Two rows of text */}
+      <div className="column-text">
+        <h2 className="responsive-heading">We innovate for better lives.</h2>
+      </div>
+      <div className="column-text pt-4">
+        <p className="sub-heading responsive-subheading">Founded by Mr. Shashank Misra, Ekak was born out of the<br /> thirst for a challenge and a vision for environmentally<br />   and socially sustainable business.</p>
       </div>
     </div>
+
+    {/* Second Column */}
+    <div className="col-md-4 col-sm-12 column-content right-aligned" style={{ border: 'none', textAlign: 'left' }}>
+      {/* Four rows (one for image, three for text) */}
+      <div className="image-container pr-5 mr-3">
+        <img src="Ekak Definition.png" alt="Ekak Definition" style={{ width: '25rem',marginLeft:'20px' }} />
+      </div>
+      <div className="column-text1 pr-5 mr-5">
+        <p style={{ fontSize: '2rem', fontWeight: 500, margin: 0 }}>May</p>
+      </div>
+      <div className="column-text1 pr-5 mr-5">
+        <p style={{ fontSize: '5rem', fontWeight: 600, margin: 0 }}>2018</p>
+      </div>
+      <div className="column-text1 pr-5 mr-5">
+        <p style={{ fontSize: '1rem', margin: 0, fontStyle: 'italic' }}>Ekak was born.</p>
+      </div>
+    </div>
+  </div>
+
+  <style jsx>{`
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+    * {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    @media (max-width: 576px) {
+      .column-content {
+        text-align: center; // Center text on smaller screens
+      }
+         .column-text1 {
+        text-align: center; // Center text in column-text for smaller screens
+      }
+      
+      .responsive-heading {
+        font-size: 1.5rem; // Increase font size for h2
+        font-weight:700px;
+      }
+      .responsive-subheading {
+        font-size: 1rem; // Increase font size for sub-heading
+        font-weight:100px;
+      }
+      .image-container {
+        margin: 0 auto; // Center image container
+      }
+    }
+  `}</style>
+</div>
+
+
+
+
+
 {/* Mission and vision section */}
 <div className="row" style={{ backgroundImage: "url('\Ekak website- Homepage Images hero.png')", backgroundSize: 'cover' }}>
       <div className="col-md-4 text-column pl-md-5 text-center text-md-left d-flex justify-content-center align-items-center" style={{ fontFamily: '"Poppins", sans-serif', color: '#f0f0f0' }}>
@@ -335,6 +380,8 @@ const Navbar = () => {
 
 
 
+
+< Footer />
 
 
     </>
