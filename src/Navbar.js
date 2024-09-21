@@ -26,13 +26,27 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+
+  const carouselCaptionStyle = {
+    textAlign: 'center',
+    bottom: '50%',
+    transform: 'translateY(50%)'
+  };
+  
+  const titleStyle = {
+    fontSize: '3rem', // Larger font size for the title
+    fontWeight: 'bold' // Make the title bolder
+  };
+  
+  
+  
   return (
     <>
       <nav id="navbar" className={`navbar navbar-expand-lg navbar-light fixed-top ${scrolled ? 'scrolled' : ''}`}>
         <a className="navbar-brand" >
           <img
             id="navbar-logo"
-            src={scrolled ? "Ekak logo mark (white logo with blue inner circle).png" : "Ekak logo mark without colour version.png"}
+            src={scrolled ? 'ekak-logo-1.png' : 'ekak-logo-2.png'}
             width="100px"
             className="d-inline-block align-top"
             alt=""
@@ -72,7 +86,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <div className="row justify-content-start content-row1 mt-5 pt-5">
+      {/* <div className="row justify-content-start content-row1 mt-5 pt-5">
         <div className="col-md-10 col-12">
           <div className="row no-gutters mt-5">
             <div className="col-md-6 col-12 d-flex justify-content-center align-items-center my-2 font-weight-bold" style={{ fontSize: 'calc(2.5rem + 2vw)' }}>
@@ -92,9 +106,42 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+      </div> */}
+                    
+
+
+                    <div id="carouselExampleFade" className="carousel slide carousel-fade" data-ride="carousel">
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img className="d-block w-100" src="hero11.jpg" alt="First slide" />
+      <div className="carousel-caption d-none d-md-block" style={carouselCaptionStyle}>
+        <p  className='heading1hero' style={titleStyle}>WE PROUDLY EMPOWER COMMUNITIES</p>
       </div>
+    </div>
+    <div className="carousel-item">
+      <img className="d-block w-100" src="hero22.jpg" alt="Second slide" />
+      <div className="carousel-caption d-none d-md-block" style={carouselCaptionStyle}>
+        <p className='heading1hero' style={titleStyle}>WE PROUDLY INNOVATE INDUSTRIES</p>
+      </div>
+    </div>
+    <div className="carousel-item">
+      <img className="d-block w-100" src="hero3 (2).jpg" alt="Third slide" />
+      <div className="carousel-caption d-none d-md-block" style={carouselCaptionStyle}>
+        <p className='heading1hero' style={titleStyle}>WE PROUDLY FOSTER PARTNERSHIPS</p>
+      </div>
+    </div>
+  </div>
+  <a className="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="sr-only">Previous</span>
+  </a>
+  <a className="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="sr-only">Next</span>
+  </a>
+</div>
 
-
+{/* Second card section */}
 
       <section className="row responsive-section">
         <div className="col text-left">
@@ -230,22 +277,22 @@ const Navbar = () => {
   {/* Award Section */ }
           <div className="card-group mt-5 pt-5">
       <div className="card" style={{ border: 'none', margin: 0, padding: 0 }}>
-        <img src="Homepage Award  (1) 1.png" className="card-img-top p-4 pt-0" alt="Award 1" />
+        <img src="Homepage Award  (1) 1.png" className="card-img-top p-4 pt-5" alt="Award 1" />
       </div>
       <div className="card p-0 m-0" style={{ border: 'none' }}>
-        <img src="Homepage Award 2 (1) 1.png" className="card-img-top p-4 pt-0" alt="Award 2" />
+        <img src="Homepage Award 2 (1) 1.png" className="card-img-top p-4 pt-5" alt="Award 2" />
       </div>
       <div className="card" style={{ border: 'none' }}>
-        <img src="Homepage Award 3 (1) 1.png" className="card-img-top p-4 pt-0" alt="Award 3" />
+        <img src="Homepage Award 3 (1) 1.png" className="card-img-top  p-2" alt="Award 3" />
       </div>
       <div className="card" style={{ border: 'none' }}>
-        <img src="Homepage Award 4.png" className="card-img-top  p-4 pt-0 " alt="Award 4" />
+        <img src="Homepage Award 4.png" className="card-img-top  p-5 pt-5" alt="Award 4" />
       </div>
           </div>
 
 
           {/* Approach section */}
-          <div className="row" style={{ backgroundImage: "url('Ekak website- Homepage Images (Hover Effect).png')", backgroundSize: 'cover' }}>
+          <div className="row  pt-3" style={{ backgroundImage: "url('Ekak website- Homepage Images (Hover Effect).png')", backgroundSize: 'cover' }}>
       <div className="col-md-4 text-column pl-md-5 text-center text-md-left d-flex justify-content-center align-items-center" style={{ fontFamily: '"Poppins", sans-serif', color: '#f0f0f0' }}>
         <p>We break down complex problems into<br /> smaller, manageable subproblems for<br /> effective solutions.</p>
       </div>
@@ -278,13 +325,14 @@ const Navbar = () => {
           marginBottom: '20px', // Space below the box
           maxWidth: '100%', // Ensures the card doesn't exceed screen width
           width: '600px', // Fixed width for larger screens
+       
         }}
       >
         <p
-          className="mb-0"
+          className="mb-0 mt-3 ml-2"
           style={{
-            fontSize: '30px', // Font size for larger screens
-            marginLeft:'15px',
+            fontSize: '38px', // Font size for larger screens
+            marginLeft:'25px',
             fontWeight: 'bold',
             margin: 0,
             '@media (max-width: 576px)': {
@@ -297,11 +345,11 @@ const Navbar = () => {
         </p>
 
         <p
-          className="text111 mb-0"
+          className="text111 mb-0 pt-4 mt-5 ml-2 "
           style={{
-            marginTop: '55px',
+           
             fontSize: '18px', // Font size for larger screens
-            marginLeft:'15px',
+            marginLeft:'25px',
             margin: 0,
             '@media (max-width: 576px)': {
               fontSize: '14px', // Adjust font size for smaller screens
@@ -315,6 +363,7 @@ const Navbar = () => {
           <br />
           around customer satisfaction.
         </p>
+        <div className='mt-3'></div>
       </div>
     </div>
   </div>
@@ -349,7 +398,7 @@ const Navbar = () => {
           >
             <div className="cylindrical-image-container">
               <img
-                src="Ekak Blog Image 3.0 22.png"
+                   src="Ekak Blog Image 3.0 111.png"
                 alt=""
                 className="img-fluid cylindrical-image"
               />
@@ -367,7 +416,8 @@ const Navbar = () => {
           >
             <div className="cylindrical-image-container">
               <img
-                src="Ekak Blog Image 3.0 111.png"
+             
+                  src="Ekak Blog Image 3.0 22.png"
                 alt=""
                 className="img-fluid cylindrical-image"
               />
@@ -407,23 +457,23 @@ const Navbar = () => {
             alt=""
             className="mx-auto d-block hover-effect"
           />
-          <p className="testimonial p-2">
+          <p className="testimonial">
             <i>
               Since our inception, we've been dedicated to delivering innovative and dependable solutions to our
               clients. We are proud to have been the trusted partner of the following forward-thinking corporations.
             </i>
           </p>
-          <p className="author mt-4">TRUSTED BY TOP BRANDS</p>
+          <p className="author mt-4 pt-5">TRUSTED BY TOP BRANDS</p>
           <div className="container-fluid">
             <div className="row content-row2">
-              <div className="col-12 mt-5">
+              <div className="col-12 ">
                 <div className="card-group">
                   <div className="card" style={{ border: 'none' }}>
                     <img
                       src="Ekak Website13.png"
                       alt="Brand 1"
                       className="img-fluid pl-5"
-                      style={{ maxWidth: '230px', width: '100%' }}
+                      style={{ maxWidth: '270px', width: '100%' }}
                     />
                   </div>
                   <div className="card" style={{ border: 'none' }}>
