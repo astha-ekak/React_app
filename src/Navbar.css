@@ -32,8 +32,72 @@
 
 @media (max-width: 768px) {
   .navbar-nav .nav-item {
-    margin-right: 10px; 
+    margin-right: 10px;
+  }
+
+  /* Ensure the navbar has a solid background color on small screens */
+  #navbar {
+    background-color: #158d91;
+  }
+
+  /* Ensure the toggler button keeps the navbar background color */
+  .navbar-toggler {
+    background-color: #158d91;
+    border: none;
+  }
+
+  /* Change text color inside the collapsed navbar for small screens */
+  .navbar-light .navbar-nav .nav-link {
+    color: white;
+  }
+
+  .navbar-collapse.show {
+    background-color: #158d91;
   }}
+
+
+
+
+
+
+
+
+/*carousel styling*/
+
+
+
+/* Ensuring text is responsive */
+.responsive-text10 {
+  font-size: 4vw; /* Scales the text with screen width */
+}
+
+@media (max-width: 768px) {
+  .responsive-text10 {
+    font-size: 8vw; /* Smaller screens get larger text */
+  }
+}
+
+/* Ensuring the carousel images are fully responsive */
+.carousel-image {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.carousel-caption {
+  bottom: 20px; /* Adjust text position */
+  text-align: center;
+}
+
+/* Additional tweaks for very small screens */
+@media (max-width: 576px) {
+  .responsive-text10 {
+    font-size: 6vw; /* Further adjust text size on very small screens */
+  }
+  .carousel-caption {
+    bottom: 10px; /* Adjust text position further */
+  }
+}
+
 
 
 

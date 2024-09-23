@@ -34,7 +34,7 @@ const Navbar = () => {
   };
   
   const titleStyle = {
-    fontSize: '3rem', // Larger font size for the title
+   // Larger font size for the title
     fontWeight: 'bold' // Make the title bolder
   };
   
@@ -59,27 +59,27 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mx-auto pl-5 ml-5">
             <li className="nav-item">
-              <a className="nav-link" href="/home">Home</a>
+              <a className="nav-link" href="/home" style={{color:'white'}}>Home</a>
             </li>
             <li className="nav-item">
-          <Link to="/about" className="nav-link">About</Link>
+          <Link to="/about" className="nav-link" style={{color:'white'}}>About</Link>
         </li>
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a style={{color:'white'}} className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Resources
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a target="_blank" className="dropdown-item" href="https://medium.com/@EkakInn" rel="noopener noreferrer" onClick={() => window.open("https://medium.com/@EkakInn", '_blank')}>Blogs</a>
+                <a target="_blank" style={{color:'white'}} className="dropdown-item" href="https://medium.com/@EkakInn" rel="noopener noreferrer" onClick={() => window.open("https://medium.com/@EkakInn", '_blank')}>Blogs</a>
               </div>
             </li>
             <li className="nav-item">
-          <Link to="/teams" className="nav-link">Team</Link>
+          <Link to="/teams" style={{color:'white'}} className="nav-link">Team</Link>
         </li>
             <li className="nav-item">
-              <a className="nav-link" href="/career">Career</a>
+              <a className="nav-link" style={{color:'white'}} href="/career">Career</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/contact">Contact</a>
+              <a className="nav-link" style={{color:'white'}} href="/contact">Contact</a>
             </li>
           </ul>
           
@@ -109,25 +109,24 @@ const Navbar = () => {
       </div> */}
                     
 
-
                     <div id="carouselExampleFade" className="carousel slide carousel-fade" data-ride="carousel">
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img className="d-block w-100" src="hero11.jpg" alt="First slide" />
-      <div className="carousel-caption d-none d-md-block" style={carouselCaptionStyle}>
-        <p  className='heading1hero' style={titleStyle}>WE PROUDLY EMPOWER COMMUNITIES</p>
+      <img className="d-block w-100 carousel-image" src="hero11.jpg" alt="First slide" />
+      <div className="carousel-caption d-block" style={carouselCaptionStyle}>
+        <p className='hero-heading responsive-text10' style={titleStyle}>WE PROUDLY EMPOWER COMMUNITIES</p>
       </div>
     </div>
     <div className="carousel-item">
-      <img className="d-block w-100" src="hero22.jpg" alt="Second slide" />
-      <div className="carousel-caption d-none d-md-block" style={carouselCaptionStyle}>
-        <p className='heading1hero' style={titleStyle}>WE PROUDLY INNOVATE INDUSTRIES</p>
+      <img className="d-block w-100 carousel-image" src="hero22.jpg" alt="Second slide" />
+      <div className="carousel-caption d-block" style={carouselCaptionStyle}>
+        <p className='hero-heading responsive-text10' style={titleStyle}>WE PROUDLY INNOVATE INDUSTRIES</p>
       </div>
     </div>
     <div className="carousel-item">
-      <img className="d-block w-100" src="hero3 (2).jpg" alt="Third slide" />
-      <div className="carousel-caption d-none d-md-block" style={carouselCaptionStyle}>
-        <p className='heading1hero' style={titleStyle}>WE PROUDLY FOSTER PARTNERSHIPS</p>
+      <img className="d-block w-100 carousel-image" src="hero3 (2).jpg" alt="Third slide" />
+      <div className="carousel-caption d-block" style={carouselCaptionStyle}>
+        <p className='hero-heading responsive-text10' style={titleStyle}>WE PROUDLY FOSTER PARTNERSHIPS</p>
       </div>
     </div>
   </div>
@@ -140,6 +139,7 @@ const Navbar = () => {
     <span className="sr-only">Next</span>
   </a>
 </div>
+
 
 {/* Second card section */}
 
